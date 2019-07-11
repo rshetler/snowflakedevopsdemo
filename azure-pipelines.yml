@@ -9,16 +9,10 @@ trigger:
 pool:
   'Snowflake_pool'
 
-steps:
-#- script: /Applications/SnowSQL.app/contents/MacOS/snowsql -a va_demo32.us-east-1 -u rshetler -q "show stages;"
-#  displayName: 'TestSnowsql'
-
+# Create new database shell for development 
 - task: CmdLine@2
   inputs:
     script: 'snowsql -a va_demo32.us-east-1 -u devops_user --filename $(agent.builddirectory)/s/Create_DevOps_DemoDB.sql'
     workingDirectory: '/Applications/SnowSQL.app/contents/MacOS'
 
-#- script: |
-#   echo Add other tasks to build, test, and deploy your project.
-#    echo See https://aka.ms/yaml
-#  displayName: 'Run a multi-line script'
+
