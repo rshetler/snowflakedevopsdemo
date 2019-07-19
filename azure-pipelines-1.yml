@@ -10,8 +10,6 @@ pool:
   'Snowflake_pool'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 
 # Create new database shell for development 
 - task: CmdLine@2
