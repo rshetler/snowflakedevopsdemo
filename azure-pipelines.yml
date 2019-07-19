@@ -13,6 +13,6 @@ pool:
 - task: CmdLine@2
   inputs:
     script: 'snowsql -a va_demo32.us-east-1 -u devops_user --filename $(agent.builddirectory)/s/Create_DevOps_DemoDB.sql'
-    workingDirectory: '/Applications/SnowSQL.app/contents/MacOS'
+    workingDirectory: '/home/rshetler/bin'
 
 
