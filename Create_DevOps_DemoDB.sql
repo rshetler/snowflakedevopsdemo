@@ -34,4 +34,4 @@ create or replace TABLE LINEITEM (
 );
 
 --load data from the incoming new data set stage
-copy into lineitem from @incoming_data/ file_format=csv;
+copy into lineitem from @devops_demodb.public.incoming_data/ file_format=csv;
