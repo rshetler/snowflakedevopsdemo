@@ -1,5 +1,5 @@
---Create new database to manage new data source
-create database DEVOPS_DEMODB;
+--Create new database to manage new data source, if needed
+--create database DEVOPS_DEMODB;
 
 --use database we created
 use DEVOPS_DEMODB
@@ -32,3 +32,5 @@ create or replace TABLE LINEITEM (
 	L_SHIPMODE VARCHAR(10) NOT NULL,
 	L_COMMENT VARCHAR(44) NOT NULL
 );
+
+--load data from the incoming new data set stage
