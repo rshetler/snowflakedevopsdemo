@@ -2,7 +2,7 @@
 --create database DEVOPS_DEMODB;
 
 --use database we created
-use DEVOPS_DEMODB
+use DEVOPS_DEMODB;
 
 --Create schema to manage new data set
 create schema new_dataset;
