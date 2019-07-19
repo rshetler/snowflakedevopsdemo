@@ -15,7 +15,7 @@ pool:
 #    script: 'snowsql -a va_demo32.us-east-1 -u devops_user --filename $(agent.builddirectory)/s/Create_DevOps_DemoDB.sql'
 #    workingDirectory: '/home/rshetler/bin'
 
-- task: Bash@3
+- task: CmdLine@2
   inputs:
     filePath: 'snowsql -a va_demo32.us-east-1 -u devops_user --filename $(agent.builddirectory)/s/Create_DevOps_DemoDB.sql'
     workingDirectory: '/home/rshetler/bin'
