@@ -15,3 +15,7 @@ steps:
   inputs:
     script: 'snowsql -a va_demo32.us-east-1 -u devops_user --filename $(agent.builddirectory)/s/Create_Dev_database.sql'
     workingDirectory: '/home/rshetler/bin'
+
+- task: CmdLine@2
+  inputs:
+    script: 'ls $(agent.builddirectory)/s'
