@@ -11,7 +11,7 @@ create schema new_dataset;
 use DEVOPS_DEMODB.new_dataset;
 
 --use existing warehouse
-use se_wh;
+use warehouse se_wh;
 
 --Create table to hold CSV data
 create or replace TABLE LINEITEM (
