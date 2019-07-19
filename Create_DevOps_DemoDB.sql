@@ -1,7 +1,12 @@
 --Create new database to manage new data source
 create database DEVOPS_DEMODB;
+
+--use database we created
+use DEVOPS_DEMODB
+
 --Create schema to manage new data set
 create schema new_dataset;
+
 --switch to the new DB and Schema namespace
 use DEVOPS_DEMODB.new_dataset;
 
