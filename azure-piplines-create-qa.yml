@@ -1,0 +1,17 @@
+# Create QA environment and promote dev changes
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  'Snowflake_pool'
+
+steps:
+
+# Create new database shell for development 
+- task: CmdLine@2
+  inputs:
+    script: 'snowsql -a va_demo32.us-east-1 -u devops_user --filename $(agent.builddirectory)/s/Create_QA_database.sql'
+    workingDirectory: '/home/rshetler/bin'
