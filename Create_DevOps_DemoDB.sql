@@ -10,10 +10,10 @@ create schema new_dataset;
 --switch to the new DB and Schema namespace
 use DEVOPS_DEMODB.new_dataset;
 
-describe database DEVOPS_DEMODB;
+--use existing warehouse
+use se_wh;
 
 --Create table to hold CSV data
-
 create or replace TABLE LINEITEM (
 	L_ORDERKEY NUMBER(38,0) NOT NULL,
 	L_PRODUCTKEY NUMBER(38,0) NOT NULL,
@@ -34,3 +34,4 @@ create or replace TABLE LINEITEM (
 );
 
 --load data from the incoming new data set stage
+copy into lineitem from @incoming_data/ file_format=csv;
