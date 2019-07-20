@@ -4,6 +4,7 @@ create or replace database devops_demodb_DEVELOPMENT clone devops_demodb;
 --Switch to newly created DEVELOPMENT database
 use devops_demodb_DEVELOPMENT.new_dataset;
 
+use warehouse se_wh;
 --********Begin Development code section************
 
 --Create new tables previously not found in the primary database
