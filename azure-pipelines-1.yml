@@ -14,5 +14,5 @@ steps:
 # Create new database shell for development 
 - task: CmdLine@2
   inputs:
-    script: 'snowsql -a va_demo32.us-east-1 -u devops_user --filename $(agent.builddirectory)/s/Create_DevOps_DemoDB.sql'
+    script: 'snowsql -a va_demo32.us-east-1 -u devops_user --filename $(agent.builddirectory)/s/Create_New_Schema.sql'
     workingDirectory: '/home/rshetler/bin'
