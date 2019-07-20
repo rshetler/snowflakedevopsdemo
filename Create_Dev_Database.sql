@@ -64,3 +64,4 @@ update nation set country_code = 'GB' where n_name = 'UNITED KINGDOM';
 update nation set country_code = 'US' where n_name = 'UNITED STATES';
 commit;
 
+--Other changes
