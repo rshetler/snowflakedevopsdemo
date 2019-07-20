@@ -66,5 +66,5 @@ commit;
 
 --Other changes
 
-alter table customer add column new_lead string;
+alter table customer add column c_new_lead string;
 
