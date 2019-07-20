@@ -10,6 +10,10 @@ pool:
 
 steps:
 
+- task: CmdLine@2
+  inputs:
+    script: 'ls $(agent.builddirectory)/s'
+
 # Create new database shell for development 
 - task: CmdLine@2
   inputs:
