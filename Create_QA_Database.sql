@@ -10,5 +10,5 @@ use devops_demodb_QA.new_dataset;
 create or replace table customer clone devops_demodb_development.new_dataset.customer;
 
 --2. Clone "nation" table in dev complete with any changes commited previously
-create or replace table nation clone devops_demodb_development.new_dataset.customer;
+create or replace table nation clone devops_demodb_development.new_dataset.nation;
 
