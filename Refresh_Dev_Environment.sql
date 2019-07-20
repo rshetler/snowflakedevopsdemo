@@ -5,5 +5,5 @@ drop database devops_demodb_development;
 
 --Recreate Dev based on the new version of prod 
 
-create database devops_demo_db_development clone devops_demodb;
+create database devops_demodb_development clone devops_demodb;
 
