@@ -5,6 +5,7 @@ create database devops_demodb_QA clone devops_demodb;
 use devops_demodb_QA.new_dataset;
 
 --********Begin QA Code Promotion Section ************
+--Ensure new tables are represented here to be cloned from Dev during promotion 
 
 --1. Clone "customer" table in dev to promote to QA
 create or replace table customer clone devops_demodb_development.new_dataset.customer;
