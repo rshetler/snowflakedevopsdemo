@@ -65,3 +65,5 @@ update nation set country_code = 'US' where n_name = 'UNITED STATES';
 commit;
 
 --Other changes
+
+ls @devops_demodb.public.nation_data;
