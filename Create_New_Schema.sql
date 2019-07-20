@@ -34,4 +34,13 @@ create or replace TABLE LINEITEM (
 );
 
 --load data from the incoming new data set stage
+
+--flex up the warehouse to copy data faster
+alter warehouse se_wh set warehouse_size="XXLarge";
+
+--complete copy of data from staging area
 copy into lineitem from @devops_demodb.public.incoming_data/;
+
+--flex warehouse back down after copy completes
+
+alter warehouse set warehouse_size="xsmall";
