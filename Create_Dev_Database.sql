@@ -5,6 +5,7 @@ create or replace database devops_demodb_DEVELOPMENT clone devops_demodb;
 use devops_demodb_DEVELOPMENT.new_dataset;
 
 use warehouse se_wh;
+
 --********Begin Development code section************
 
 --Create new tables previously not found in the primary database
@@ -21,13 +22,15 @@ create or replace TABLE CUSTOMER (
 	C_COMMENT VARCHAR(117)
 );
 
---2. Create second new table
+--2. Create second new table, and copy dev data into it
 create or replace TABLE NATION (
 	N_NATIONKEY NUMBER(38,0) NOT NULL,
 	N_NAME VARCHAR(25) NOT NULL,
 	N_REGIONKEY NUMBER(38,0) NOT NULL,
 	N_COMMENT VARCHAR(152)
 );
+
+copy into nation from @devops_demodb.public.nation_data;
 
 --3. Alter nation table add column "country_code"
 alter table nation add column country_code varchar(2);
