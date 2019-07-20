@@ -66,4 +66,5 @@ commit;
 
 --Other changes
 
-ls @devops_demodb.public.nation_data;
+alter table customer add column new_lead string;
+
