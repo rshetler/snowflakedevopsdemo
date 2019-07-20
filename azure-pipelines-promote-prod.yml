@@ -10,12 +10,13 @@ pool:
 
 steps:
 
-# Create new database shell for development 
+# promote changes from QA to prod 
 - task: CmdLine@2
   inputs:
     script: 'snowsql -a va_demo32.us-east-1 -u devops_user --filename $(agent.builddirectory)/s/Promote_to_PROD.sql'
     workingDirectory: '/home/rshetler/bin'
 
+# Drop current dev clone environment and create new one after prod is refreshed
 - task: CmdLine@2
   inputs:
     script: 'snowsql -a va_demo32.us-east-1 -u devops_user --filename $(agent.builddirectory)/s/Refresh_Dev_Environment.sql'
