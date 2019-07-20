@@ -7,4 +7,4 @@ use devops_demodb.new_dataset;
 create or replace table customer clone devops_demodb_qa.new_dataset.customer;
 
 --2. Clone "nation" table from QA to promote to prod
-create or replace table nation clone devops_demodb_qa.new_dataset.customer;
+create or replace table nation clone devops_demodb_qa.new_dataset.nation;
