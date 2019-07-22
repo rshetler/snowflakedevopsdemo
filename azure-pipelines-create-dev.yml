@@ -3,9 +3,9 @@
 # https://aka.ms/yaml
 
 trigger:
-  tags:
+  branches:
     include:
-    - Dev
+    - v2
 
 pool:
   'Snowflake_pool'
