@@ -64,6 +64,6 @@ update nation set country_code = 'GB' where n_name = 'UNITED KINGDOM';
 update nation set country_code = 'US' where n_name = 'UNITED STATES';
 commit;
 
---Add column to customer table for new leads
+--Add column to customer table for new leads from source
 
 alter table customer add column c_new_lead string;
