@@ -7,7 +7,6 @@ use devops_demodb_QA.new_dataset;
 --********Begin QA Code Promotion Section ************
 --Ensure new tables are represented here to be cloned from Dev during promotion 
 
-show stages;
 
 
 

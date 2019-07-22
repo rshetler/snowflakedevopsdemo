@@ -8,4 +8,4 @@ use warehouse se_wh;
 
 --********Begin Development code section************
 
-
+show stages;
