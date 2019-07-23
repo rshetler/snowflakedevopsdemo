@@ -9,3 +9,5 @@ use warehouse se_wh;
 --********Begin Development code section************
 
 show tables;
+
+create table bla clone table nation;
