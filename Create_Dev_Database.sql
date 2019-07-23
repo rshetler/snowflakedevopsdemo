@@ -67,3 +67,5 @@ commit;
 --Add column to customer table for new leads
 
 alter table customer add column c_new_lead string;
+
+--test push
